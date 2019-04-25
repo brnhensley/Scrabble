@@ -39,9 +39,16 @@ namespace Scrabble.TestTools
     [TestMethod]
     public void AssignCharValue_ReturnNonAlphaInput_False()
     {
-      string userInput = "ANT";
-      Word testWord = new Word(userInput);
-      Assert.AreEqual(3, testWord.AssignCharValue(userInput));
+      string testUserInput = "ANT";
+      Word testWord = new Word(testUserInput);
+      Assert.AreEqual(3, testWord.AssignCharValue(testUserInput));
+    }
+
+    [TestMethod]
+    public void GetValue_GetValueOfWord_Value()
+    {
+      Word newWord = new Word("Butts");
+      newWord.GetValue();
     }
 
   }

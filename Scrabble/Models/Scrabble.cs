@@ -10,7 +10,6 @@ namespace Scrabble.Models
     private int _value;
 
     //Word constructor
-    string word = "BOOTY";
     public Word(string word)
     {
       _word = word;
