@@ -6,13 +6,8 @@ using Scrabble.Models;
 namespace Scrabble.TestTools
 {
   [TestClass]
-  public class ScrabbleTest// : IDisposible
+  public class ScrabbleTest
   {
-    // public void Dispose()
-    // {
-    //   Gram.ClearAll();
-    // }
-
     [TestMethod]
     public void WordConstructor_CreateInstanceOfWord_Word()
     {
@@ -27,7 +22,6 @@ namespace Scrabble.TestTools
       char[] testCharArray = userInput.ToCharArray();
       Assert.AreEqual('N', testCharArray[1]);
     }
-
 
     [TestMethod]
     public void WordConstructor_ReturnsValueOfChar_True()

@@ -13,9 +13,6 @@ namespace Scrabble.Models
     public Word(string word)
     {
       _word = word;
-      // Convert word into char array
-      // Run word through array to retrieve value
-      // _value = value;
       int wordValue = AssignCharValue(_word);
       _value = wordValue;
     }
@@ -36,10 +33,11 @@ namespace Scrabble.Models
       int wordValue = 0;
       char[] scrabbleCharArray = userInput.ToCharArray();
       foreach (char letter in scrabbleCharArray)
-
-      if (myDictionary.ContainsKey(letter))
       {
-        wordValue += myDictionary[letter];
+        if (myDictionary.ContainsKey(letter))
+        {
+          wordValue += myDictionary[letter];
+        }
       }
       return wordValue;
     }
