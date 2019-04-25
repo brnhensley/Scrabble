@@ -28,10 +28,17 @@ namespace Scrabble.TestTools
       Assert.AreEqual('N', testCharArray[1]);
     }
 
+
+    [TestMethod]
+    public void WordConstructor_ReturnsValueOfChar_True()
+    {
+      Word newWord = new Word("butts");
+      Assert.AreEqual(1, newWord.AssignCharValue("A"));
+    }
+
     [TestMethod]
     public void AssignCharValue_ReturnNonAlphaInput_False()
     {
-      // any necessary logic to prep for test; instantiating new classes, etc.
       string userInput = "ANT";
       Word testWord = new Word(userInput);
       Assert.AreEqual(3, testWord.AssignCharValue(userInput));
