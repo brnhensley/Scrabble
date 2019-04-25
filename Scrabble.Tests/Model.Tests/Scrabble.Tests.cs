@@ -21,10 +21,18 @@ namespace Scrabble.TestTools
     }
 
     [TestMethod]
+    public void WordConstructor_ConvertInputWordToCharArray_CharArray()
+    {
+      string userInput = "ANT";
+      char[] testCharArray = userInput.ToCharArray();
+      Assert.AreEqual('N', testCharArray[1]);
+    }
+
+    [TestMethod]
     public void AssignCharValue_ReturnNonAlphaInput_False()
     {
       // any necessary logic to prep for test; instantiating new classes, etc.
-      string userInput = "ant";
+      string userInput = "ANT";
       Word testWord = new Word(userInput);
       Assert.AreEqual(3, testWord.AssignCharValue(userInput));
     }
